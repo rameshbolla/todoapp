@@ -1,0 +1,147 @@
+{
+  "menu": [
+    {
+      "route": "dashboard",
+      "name": "dashboard",
+      "type": "link",
+      "icon": "dashboard",
+      "badge": {
+        "color": "red-500",
+        "value": "5"
+      }
+    },
+    {
+      "route": "daily-reports",
+      "name": "daily-reports",
+      "type": "sub",
+      "icon": "lock",
+      "children": [
+        {
+          "route": "nse",
+          "name": "nse",
+          "type": "link"
+        },
+        {
+          "route": "bse",
+          "name": "bse",
+          "type": "link"
+        },
+        {
+          "route": "mcx",
+          "name": "mcx",
+          "type": "link"
+        }
+      ]
+    },
+    {
+      "route": "screener",
+      "name": "screener",
+      "type": "sub",
+      "icon": "lock",
+      "children": [
+        {
+          "route": "nse",
+          "name": "nse",
+          "type": "link"
+        },
+        {
+          "route": "bse",
+          "name": "bse",
+          "type": "link"
+        },
+        {
+          "route": "mcx",
+          "name": "mcx",
+          "type": "link"
+        }
+      ]
+    },
+    {
+      "route": "orders",
+      "name": "orders",
+      "type": "sub",
+      "icon": "lock",
+      "children": [
+        {
+          "route": "nse",
+          "name": "nse",
+          "type": "link"
+        },
+        {
+          "route": "bse",
+          "name": "bse",
+          "type": "link"
+        },
+        {
+          "route": "mcx",
+          "name": "mcx",
+          "type": "link"
+        }
+      ]
+    },
+    {
+      "route": "permissions",
+      "name": "permissions",
+      "type": "sub",
+      "icon": "lock",
+      "children": [
+        {
+          "route": "role-switching",
+          "name": "role-switching",
+          "type": "link"
+        },
+        {
+          "route": "route-guard",
+          "name": "route-guard",
+          "type": "link",
+          "permissions": {
+            "except": "GUEST"
+          }
+        },
+        {
+          "route": "test",
+          "name": "test",
+          "type": "link",
+          "permissions": {
+            "only": "ADMIN"
+          }
+        }
+      ]
+    },
+    {
+      "route": "https://ng-matero.github.io/extensions/",
+      "name": "extensions",
+      "type": "extTabLink",
+      "icon": "extension",
+      "permissions": {
+        "only": "ADMIN"
+      }
+    },
+    {
+      "route": "/",
+      "name": "sessions",
+      "type": "sub",
+      "icon": "question_answer",
+      "children": [
+        {
+          "route": "403",
+          "name": "403",
+          "type": "link"
+        },
+        {
+          "route": "404",
+          "name": "404",
+          "type": "link"
+        },
+        {
+          "route": "500",
+          "name": "500",
+          "type": "link"
+        }
+      ],
+      "permissions": {
+        "only": "ADMIN"
+      }
+    }
+  ]
+}
