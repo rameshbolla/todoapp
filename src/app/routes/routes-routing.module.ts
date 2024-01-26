@@ -40,6 +40,10 @@ const routes: Routes = [
       {
         path: 'screener',
         loadChildren: () => import('./screener/screener.module').then(m => m.ScreenerModule),
+      },
+      {
+        path: 'admin',
+        loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
       }
     ],
   },

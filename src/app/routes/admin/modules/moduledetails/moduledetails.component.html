@@ -1,0 +1,112 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Module details</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form [formGroup]="moduleForm" class="form-field-full">
+      <div class="row">
+        <div class="col-sm-6">
+          <mat-form-field>
+            <mat-label>Route</mat-label>
+            <input
+              matInput
+              placeholder="Simple placeholder"
+              type="text"
+              formControlName="route"
+              required
+            />
+            <mat-error *ngIf="moduleForm.get('route')?.invalid">
+              {{ 'validations.required' }}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input
+              matInput
+              placeholder="Simple placeholder"
+              type="text"
+              formControlName="name"
+              required
+            />
+            <mat-error *ngIf="moduleForm.get('name')?.invalid">
+              {{ 'validations.required' }}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field>
+            <mat-label>Type</mat-label>
+            <input
+              matInput
+              placeholder="Simple placeholder"
+              formControlName="type"
+              type="text"
+              required
+            />
+            <mat-error *ngIf="moduleForm.get('type')?.invalid">
+              {{ 'validations.required' }}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field>
+            <mat-label> Display Icon</mat-label>
+            <input
+              matInput
+              placeholder="Simple placeholder"
+              type="text"
+              formControlName="displayIcon"
+            />
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field>
+            <mat-label>Badge Color</mat-label>
+            <input matInput placeholder="Simple placeholder" formControlName="badgeColor" />
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field>
+            <mat-label>Badge Value</mat-label>
+            <input matInput placeholder="Simple placeholder" formControlName="badgeValue" />
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field>
+            <mat-label>Label Color</mat-label>
+            <input matInput placeholder="Simple placeholder" formControlName="labelColor" />
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field>
+            <mat-label>Label Value</mat-label>
+            <input matInput placeholder="Simple placeholder" formControlName="labelValue" />
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field>
+            <mat-label>Active</mat-label>
+            <input matInput placeholder="Simple placeholder" formControlName="isActive" />
+          </mat-form-field>
+        </div>
+        <div class="col-sm-12">
+          <mat-form-field>
+            <mat-label>Description</mat-label>
+            <textarea
+              matInput
+              placeholder="Simple placeholder"
+              formControlName="description"
+            ></textarea>
+          </mat-form-field>
+        </div>
+        <div class="m-t-8 d-flex justify-content-end">
+          <button mat-button class="m-x-8" (click)="btnCloseSidePanel()" type="button">Cancel</button>
+          <button mat-raised-button (click)="btnSubmitModuleDetails()" type="button" color="primary">Save</button>
+        </div>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
