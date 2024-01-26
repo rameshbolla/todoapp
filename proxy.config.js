@@ -2,9 +2,9 @@
 
 const PROXY_CONFIG = {
   '/api': {
-    target: 'http://www.misngtodo.com',
+    target: 'https://dsstodoapp.azurewebsites.net/',
     changeOrigin: true,
-    secure: false,
+    secure: true,
     logLevel: 'debug'
     // onProxyReq: (proxyReq, req, res) => {
     //   const cookieMap = {
